@@ -27,7 +27,7 @@ const step = (t1) => (t2) => {
 
 // Key events
 window.addEventListener("keydown", (e) => {
-  switch (e) {
+  switch (e.key) {
     case "w":
     case "h":
     case "ArrowUp":
