@@ -13,7 +13,7 @@ const draw = () => {
 
   // draw snake
   ctx.fillStyle = "rgb(0,200,50)";
-  state.snake.map((p) => ctx.fillRect(x(p.x), y(p.y, x(1), y(1))));
+  state.snake.map((p) => ctx.fillRect(x(p.x), y(p.y), x(1), y(1)));
 
   // draw apple
   ctx.fillStyle = "rgb(255,50,0)";
@@ -31,7 +31,7 @@ let state = initialState();
 
 // Game loop update
 const step = (t1) => (t2) => {
-  if (t1 - t2 > 100) {
+  if (t2 - t1 > 100) {
     state = next(state);
     draw();
     window.requestAnimationFrame(step(t2));
