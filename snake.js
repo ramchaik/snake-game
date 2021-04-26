@@ -4,6 +4,12 @@ const SOUTH = { x: 1, y: 1 };
 const EAST = { x: 1, y: 0 };
 const WEST = { x: -1, y: 0 };
 
+// Randomness
+const rndPos = (table) => ({
+  x: 0,
+  y: 0,
+});
+
 // Initial state
 const initialState = () => ({
   cols: 20,
