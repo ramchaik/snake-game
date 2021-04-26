@@ -1,13 +1,3 @@
-const {
-  next,
-  enqueue,
-  initialState,
-  NORTH,
-  SOUTH,
-  EAST,
-  WEST,
-} = require("snake.js");
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -26,7 +16,7 @@ const draw = () => {
   state.snake.map((p) => ctx.fillRect(x(p.x), y(p.y, x(1), y(1))));
 
   // draw apple
-  ctx.fillStyle = "rgb(255,0,50)";
+  ctx.fillStyle = "rgb(255,50,0)";
   ctx.fillRect(x(state.apple.x), y(state.apple.y), x(1), y(1));
 
   // add crash
