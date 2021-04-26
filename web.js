@@ -11,6 +11,10 @@ const {
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
+// Position helpers
+const x = (c) => Math.round((c * canvas.width) / state.cols);
+const y = (r) => Math.round((r * canvas.height) / state.rows);
+
 // Game loop draw
 const draw = () => {
   // clear
