@@ -60,11 +60,8 @@ process.stdin.on("keypress", (str, key) => {
 
 // Game loop
 const show = () =>
-  console.log("\x1Bc" + Matrix.toString(Matrix.fromState(State)));
+  console.log("\x1Bc" + pipe(Matrix.fromState, Matrix.toString)(State));
 const step = () => (State = Snake.next(State));
 
 // Main
-setInterval(() => {
-  step();
-  show();
-}, 80);
+setInterval(pipe(step, show), 80);
